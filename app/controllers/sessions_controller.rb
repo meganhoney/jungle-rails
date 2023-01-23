@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     else
     # if user login doesn't work, send back to login form
       redirect_to '/login'
+    end
   end
 
   def destroy

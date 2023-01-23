@@ -17,13 +17,14 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
   end
 
-  # these routes are for showing users a login form, logging them in, and logging them out.
+  resources :users, only: [:new, :create]
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
+
+  # get '/signup' => 'users#new'
+  # post '/users' => 'users#create'
 
   
 
