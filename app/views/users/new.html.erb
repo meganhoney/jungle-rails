@@ -1,12 +1,16 @@
-<h2>Please sign up</h2>
+<h2 class="my-4">Please sign up</h2>
+<div class="form-group">
 
-<%= form_for :user, url: '/users' do |f| %>
+  <%= form_for :user, url: '/users', :html => {:class => "d-inline-flex flex-column"} do |f| %>
 
-  First name: <%= f.text_field :first_name %>
-  Last name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+    First name: <%= f.text_field :first_name %>
+    Last name: <%= f.text_field :last_name %>
+    Email: <%= f.text_field :email %>
+    Password: <%= f.password_field :password %>
+    Confirm password: <%= f.password_field :password_confirmation %>
+    <%= f.submit "Submit", class: "btn btn-success mt-2" %>
 
-<% end %>
+  <% end %>
+
+</div>
+
